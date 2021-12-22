@@ -45,6 +45,7 @@ wss.on('connection', function connection(ws) {
 
           let spawnIndex = 0;
           for (let i = 0; i < indexes.length; i++) {
+            if (i == 0 && indexes[0] != 0) break;
             spawnIndex = indexes[i] + 1;
             if (i > 0 && indexes[i] - indexes[i - 1] > 1) break;
           }
